@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-22T11:08:38.194Z</updated>
+    <updated>2020-10-22T11:54:59.776Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -31,9 +31,53 @@ vector 即是向量，是一个动态的数组（顺序容器）。并且能够�
     vector(begin, end);  // 复制区间[begin, end)内另一个数组的元素到vector中
 
     2.void push_back(const T&amp; x);  // 向量尾部增加一个元素x
+
     3.iterator insert(iterator it, const T&amp; x);  // 向量中迭代器指向元素前增加一个元素
-    4.iterator insert(iterator it, int n, const T&amp; x);  // 向量中迭代器指向元素前添加n个相同的元素x
-    5.</code></pre>
+    iterator insert(iterator it, int n, const T&amp; x);  // 向量中迭代器指向元素前添加n个相同的元素x
+    iterator insert(iterator it, const_iterator fist, const_iterator last);  // 往向量中迭代器指向的元素前插入另一个相同类型向量[first, last)间的数据。
+
+    4.iterator erase(iterator it);  // 删除向量中迭代器指向的元素
+    iterator erase(iterator first, iterator last);  // 删除向量中[first, last)中的元素
+
+    5.void pop_back();  //删除向量中迭代器指向元素
+    void clear();  // 清空向量中所以元素
+
+    6.reference at(int pos);  // 返回pos位置元素的引用
+    reference front();  // 返回首元素的引用
+    reference back();  // 返回尾元素的引用
+    iterator begin();  // 返回向量头指针，指向第一个元素
+    iterator end();  // 返回向量尾指针，指向向量最后一个元素的下一个位置
+
+    7.bool empty() const;  // 判断向量是否为空
+
+    8.int size() const;  // 返回向量中元素的个数
+    9.int capacity() const;  // 返回当前向量所能容纳的最大元素值
+    10.int max_size() const;  // 返回最大可允许的vector元素的最值
+    11.void swap(vector&amp;);  // 交换两个同类型向量的数据
+    12.void assign(int n, const T&amp; x);  // 设置向量中第n个元素的值为x
+    13.void assign(const_iterator first, const_iterator last);  // 向量中[firrst, last)中的元素设置成当前向量元素
+</code></pre>
+<p>四，使用范例</p>
+<pre><code>    #include &lt;string.h&gt;
+    #include &lt;vector&gt;
+    #include &lt;iostream&gt;
+    using namespace std;
+
+    int main()
+    {
+        vector&lt;int&gt; obj;  // 创建一个int类型的向量容器
+        for(int i=0;i&lt;10;i++)
+        {
+            obj.push_back(i);   // 往vector数组后面添加i数据
+            cout&lt;&lt;obj[i]&lt;&lt;&quot;,&quot;;
+        }
+
+        
+
+
+        return 0;
+    }
+</code></pre>
 ]]></content>
     </entry>
 </feed>
