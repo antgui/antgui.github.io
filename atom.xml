@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-22T16:11:56.862Z</updated>
+    <updated>2020-10-22T16:47:49.595Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://antgui.github.io/images/avatar.png</logo>
     <icon>https://antgui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, WuQZ</rights>
+    <entry>
+        <title type="html"><![CDATA[排序算法 -- 基于c++实现]]></title>
+        <id>https://antgui.github.io/post/pai-xu-suan-fa-ji-yu-cshi-xian/</id>
+        <link href="https://antgui.github.io/post/pai-xu-suan-fa-ji-yu-cshi-xian/">
+        </link>
+        <updated>2020-10-22T16:25:48.000Z</updated>
+        <content type="html"><![CDATA[<p>一，排序（百度）<br>
+排序分为比较类排序和非比较类排序。<br>
+比较排序：通过比较来决定元素间的相对次序，由于其平均时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。<br>
+非比较类排序：不通过比较来决定元素相对次序，可以突破基于比较排序的时间下界，以线性时间运行。</p>
+<p>时间复杂度（取自网上）：<br>
+<img src="https://antgui.github.io//post-images/1603384430837.png" alt="" loading="lazy"></p>
+<p>1.冒泡排序（Bubble Sort）<br>
+反复两两比较，最后将小元素“浮”到顶端。<br>
+算法分析：比较相邻的两个元素，将小的换到前面，等于的时候不变。<br>
+动图演示（来自百度）：<br>
+<img src="https://antgui.github.io//post-images/1603384671553.gif" alt="" loading="lazy"><br>
+算法实现（c/c++）：</p>
+<pre><code>
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[linux基础操作+终端科学上网]]></title>
         <id>https://antgui.github.io/post/linux-ji-chu-cao-zuo-zhong-duan-ke-xue-shang-wang/</id>
