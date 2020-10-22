@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-22T13:32:29.892Z</updated>
+    <updated>2020-10-22T14:50:05.606Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://antgui.github.io/images/avatar.png</logo>
     <icon>https://antgui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, WuQZ</rights>
+    <entry>
+        <title type="html"><![CDATA[linux基础操作+终端科学上网]]></title>
+        <id>https://antgui.github.io/post/linux-ji-chu-cao-zuo-zhong-duan-ke-xue-shang-wang/</id>
+        <link href="https://antgui.github.io/post/linux-ji-chu-cao-zuo-zhong-duan-ke-xue-shang-wang/">
+        </link>
+        <updated>2020-10-22T13:42:38.000Z</updated>
+        <content type="html"><![CDATA[<p>上网</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mysql简单基础和leetcode练习题]]></title>
+        <id>https://antgui.github.io/post/mysql-jian-dan-ji-chu-he-leetcode-lian-xi-ti/</id>
+        <link href="https://antgui.github.io/post/mysql-jian-dan-ji-chu-he-leetcode-lian-xi-ti/">
+        </link>
+        <updated>2020-10-22T13:41:55.000Z</updated>
+        <content type="html"><![CDATA[<p>开始</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[数据结构  --使用c++语言描述]]></title>
         <id>https://antgui.github.io/post/shu-ju-jie-gou-shi-yong-cyu-yan-miao-shu/</id>
@@ -28,9 +46,15 @@
         <content type="html"><![CDATA[<p>一，简单题</p>
 <p>1.两数之和<br>
 <img src="https://antgui.github.io//post-images/1603372333141.png" alt="" loading="lazy"></p>
-<p>暴力解法：O(n^2)<br>
+<p>第一种方法：暴力解法：O(n^2)   花费时间最多<br>
 题目分析：题目给定一个整数数组和一个目标值，而这个目标值是这个整数数组其中两个元素的加和，并且同一个元素不能使用两次。我们可以通过选定数组的其中一个元素作为加和前一项，加和的后一项我们可以遍历除选定外的后面元素，假如等于目标值，则返回。最后我们将选定的前一相变为循环即可。<br>
 <img src="https://antgui.github.io//post-images/1603373523977.png" alt="" loading="lazy"></p>
+<p>第二种方法：哈希表法（hashmap）<br>
+分析：我们可以通过创建哈希表，通过对应表（键值对）来进行查找，这个也是我们在现实工程使用最多，也是最吃经验的方法。（主要思想是边存边查，这样更快）</p>
+<p>a.存完再找<br>
+使用unordered_map<br>
+<img src="https://antgui.github.io//post-images/1603378197180.png" alt="" loading="lazy"></p>
+<p>b.边存边找</p>
 ]]></content>
     </entry>
     <entry>
