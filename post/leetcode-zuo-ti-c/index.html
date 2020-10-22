@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603372338516">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603373545824">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -21,7 +21,8 @@
     <meta name="description" content="一，简单题
 1.两数之和
 
-" />
+暴力解法：O(n^2)
+题目分析：题目给定一个整数数组和一个目标值，而这个目标值是这个整数数组其中两个元素的加和，并且同一个元素不能使用两次。我们可以通过选定数组的其中一个元素作为加和前一项，加和的后一项我们可以..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -31,7 +32,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603372338516" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603373545824" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -100,6 +101,9 @@
               <p>一，简单题</p>
 <p>1.两数之和<br>
 <img src="https://antgui.github.io//post-images/1603372333141.png" alt="" loading="lazy"></p>
+<p>暴力解法：O(n^2)<br>
+题目分析：题目给定一个整数数组和一个目标值，而这个目标值是这个整数数组其中两个元素的加和，并且同一个元素不能使用两次。我们可以通过选定数组的其中一个元素作为加和前一项，加和的后一项我们可以遍历除选定外的后面元素，假如等于目标值，则返回。最后我们将选定的前一相变为循环即可。<br>
+<img src="https://antgui.github.io//post-images/1603373523977.png" alt="" loading="lazy"></p>
 
             </div>
             
