@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603364389871">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603364910829">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -34,7 +34,7 @@ vector 即是向量，是一个动态的数组（顺序容器）。并且能够�
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603364389871" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603364910829" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -107,14 +107,17 @@ vector 即是向量，是一个动态的数组（顺序容器）。并且能够�
 1.顺序列表<br>
 2.动态数组<br>
 3.动态分配</p>
-<p>三，常用函数<br>
-1.vector();<br>
-vector();  // 创建一个空vector<br>
-vector(int nSize, const t&amp; t);  // 创建一个vector， 元素个数为nSize，且值均为t<br>
-vector(const vector&amp;);  // 复制构筑函数<br>
-vector(begin, end);  // 复制区间[begin, end)内另一个数组的元素到vector中</p>
-<pre><code>    2.void push_back(const T&amp; x);  // 向量尾部增加一个元素x
-    3.</code></pre>
+<p>三，常用函数</p>
+<pre><code>    1.vector();
+    vector();  // 创建一个空vector
+    vector(int nSize, const t&amp; t);  // 创建一个vector， 元素个数为nSize，且值均为t
+    vector(const vector&amp;);  // 复制构筑函数
+    vector(begin, end);  // 复制区间[begin, end)内另一个数组的元素到vector中
+
+    2.void push_back(const T&amp; x);  // 向量尾部增加一个元素x
+    3.iterator insert(iterator it, const T&amp; x);  // 向量中迭代器指向元素前增加一个元素
+    4.iterator insert(iterator it, int n, const T&amp; x);  // 向量中迭代器指向元素前添加n个相同的元素x
+    5.</code></pre>
 
             </div>
             
