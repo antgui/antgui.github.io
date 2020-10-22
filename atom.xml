@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-22T15:07:14.832Z</updated>
+    <updated>2020-10-22T16:04:15.170Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -38,7 +38,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Leetcode 做题 c++]]></title>
+        <title type="html"><![CDATA[Leetcode 做题(简单篇)  基于c++]]></title>
         <id>https://antgui.github.io/post/leetcode-zuo-ti-c/</id>
         <link href="https://antgui.github.io/post/leetcode-zuo-ti-c/">
         </link>
@@ -56,6 +56,10 @@
 <img src="https://antgui.github.io//post-images/1603378197180.png" alt="" loading="lazy"></p>
 <p>b.边存边找<br>
 <img src="https://antgui.github.io//post-images/1603379226954.png" alt="" loading="lazy"></p>
+<p>2.整数反转<br>
+<img src="https://antgui.github.io//post-images/1603379453894.png" alt="" loading="lazy"><br>
+题目分析：将一个带符号整数数字反转，我们可以利用求余和地板除法来办到，比如：temp=12%10就是等于取出最低位2，12/10就是斩断最后一位剩1，当等于0时候停止循环，那么在利用sum = sum*10+temp即可。<br>
+<img src="https://antgui.github.io//post-images/1603382647330.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
