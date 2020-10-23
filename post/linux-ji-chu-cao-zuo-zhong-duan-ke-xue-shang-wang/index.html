@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603429552989">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603471603028">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -42,7 +42,7 @@ ls [-..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603429552989" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603471603028" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -132,12 +132,68 @@ sudo apt-get upgrade
 <p>7.安装命令</p>
 <pre><code>sudo apt-get install &lt;所要安装的名称&gt;
 </code></pre>
-<p>二，用户及文件权限管理<br>
+<p><strong>二，用户及文件权限管理</strong><br>
 1.查看用户(pts表示伪终端)</p>
 <pre><code>who am i
 who mom likes
 </code></pre>
 <p>2.创建用户</p>
+<pre><code>sudo adduser &lt;用户名&gt;
+</code></pre>
+<p>3.切换用户</p>
+<pre><code>su &lt;用户名&gt; 或者 su -l &lt;用户名&gt;
+</code></pre>
+<p>4.用户组</p>
+<pre><code>groups &lt;用户名&gt;
+</code></pre>
+<p>5.查看/etc/group文件</p>
+<pre><code>cat /etc/group | sort         # | sort 表示将读取到的文本进行一个字典排序再输出
+cat /etc/group | grep -E &quot;&lt;用户名&gt;&quot;     # | grep -E 过滤其他信息，只看引号关键字的
+</code></pre>
+<p>6.将其他用户假如sudo用户组(使其用户能够sudo)</p>
+<pre><code>sudo usermod -G sudo &lt;用户名&gt;
+</code></pre>
+<p>7.删除用户和用户组</p>
+<pre><code>sudo deluser &lt;用户名&gt; --remove-home   #后面的--remove-home不能去掉，表示删除user时一并将/home下的对应用户文件夹删除
+</code></pre>
+<p>8.查看文件权限</p>
+<pre><code>ls -l            # 查看本目录下的文件权限
+ls -l &lt;文件名&gt;      # 查看某文件的权限
+
+</code></pre>
+<p>文件权限表示如图：<br>
+<img src="https://antgui.github.io//post-images/1603470427034.png" alt="" loading="lazy"></p>
+<p>9.修改文件权限（重点）<br>
+首先记住读写执行的二进制表示<br>
+<img src="https://antgui.github.io//post-images/1603470547672.png" alt="" loading="lazy"><br>
+然后通过文件权限图，我们可知，权限表示是：拥有者-所属用户-其他用户。<br>
+例如：666，即是rw-rw-rw。777即是rwxrwxrwx。</p>
+<p>10.作业：添加一个用户叫“naruto”，并使用sudo创建文件/ninjia/class_four，同时设置成只有用户naruto可以读写。</p>
+<p><strong>三，文件目录</strong><br>
+1.认识目录结构<br>
+<img src="https://antgui.github.io//post-images/1603471017713.png" alt="" loading="lazy"><br>
+2.返回你的用户home目录</p>
+<pre><code>cd ~
+</code></pre>
+<p>3.新建空白文件</p>
+<pre><code>touch &lt;文件&gt;
+</code></pre>
+<p>4.新建目录</p>
+<pre><code>mkdir &lt;目录名&gt; 或 mkdir -p &lt;father&gt;/&lt;son&gt;/&lt;grandsom&gt;   # 新建毕竟深目录必须加-p
+</code></pre>
+<p>5.复制文件</p>
+<pre><code>cp &lt;源文件&gt; &lt;复制地点&gt;      # 复制单个文件
+cp -r &lt;文件目录&gt; &lt;复制地点&gt;   #复制目录到某个地点，-r表示递归复制
+</code></pre>
+<p>6.删除文件</p>
+<pre><code>rm &lt;文件名&gt;   # 删除单个文件
+rm -f &lt;文件名&gt;   # 忽略提示直接强制删除
+</code></pre>
+<p>7.删除目录</p>
+<pre><code>rm -r &lt;目录名&gt;
+rm -rf &lt;目录名&gt;
+</code></pre>
+<p>8.移动文件</p>
 
             </div>
             
