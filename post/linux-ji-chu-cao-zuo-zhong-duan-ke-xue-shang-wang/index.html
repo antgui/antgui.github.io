@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603385259427">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603429552989">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -18,8 +18,21 @@
 
 
 
-    <meta name="description" content="上网
-" />
+    <meta name="description" content="1.创建文件
+touch &lt;file&gt;
+touch {1..10}.txt   
+
+2.进入某个目录
+cd /文件名/...
+
+3.返回上一个目录
+cd ..
+
+4.查看当前所在目录的绝对路径
+pwd
+
+5.ls命令
+ls [-..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +42,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603385259427" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603429552989" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -89,7 +102,42 @@
             <div class="post-date">2020-10-22</div>
             
             <div class="post-content" v-pre>
-              <p>上网</p>
+              <p>1.创建文件</p>
+<pre><code>touch &lt;file&gt;
+touch {1..10}.txt   
+</code></pre>
+<p>2.进入某个目录</p>
+<pre><code>cd /文件名/...
+</code></pre>
+<p>3.返回上一个目录</p>
+<pre><code>cd ..
+</code></pre>
+<p>4.查看当前所在目录的绝对路径</p>
+<pre><code>pwd
+</code></pre>
+<p>5.ls命令</p>
+<pre><code>ls [-alrAFR] [name...]
+</code></pre>
+<p>-a 显示所有文件及目录 (. 开头的隐藏文件不会列出)<br>
+-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出<br>
+-r 将文件以相反次序显示(原定依英文字母次序)<br>
+-t 将文件依建立时间之先后次序列出<br>
+-A 同 -a ，但不列出 &quot;.&quot; (目前目录) 及 &quot;..&quot; (父目录)<br>
+-F 在列出的文件名称后加一符号；例如可执行档则加 &quot;*&quot;, 目录则加 &quot;/&quot;<br>
+-R 若目录下有文件，则以下之文件亦皆依序列出</p>
+<p>6.更新源</p>
+<pre><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+<p>7.安装命令</p>
+<pre><code>sudo apt-get install &lt;所要安装的名称&gt;
+</code></pre>
+<p>二，用户及文件权限管理<br>
+1.查看用户(pts表示伪终端)</p>
+<pre><code>who am i
+who mom likes
+</code></pre>
+<p>2.创建用户</p>
 
             </div>
             
