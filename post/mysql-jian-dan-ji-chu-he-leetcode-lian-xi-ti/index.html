@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603471603028">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603601054384">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -18,8 +18,20 @@
 
 
 
-    <meta name="description" content="开始
-" />
+    <meta name="description" content="1.查看数据库
+show databases;
+
+
+2.创建数据库
+create database &lt;dbname&gt;;
+
+
+3.操作数据库
+use &lt;dbname&gt;;
+
+
+4.查看数据库中所以数据表
+show tab..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +41,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603471603028" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603601054384" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -89,7 +101,42 @@
             <div class="post-date">2020-10-22</div>
             
             <div class="post-content" v-pre>
-              <p>开始</p>
+              <p>1.查看数据库</p>
+<pre><code>show databases;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603518322741.png" alt="" loading="lazy"><br>
+2.创建数据库</p>
+<pre><code>create database &lt;dbname&gt;;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603518533584.png" alt="" loading="lazy"><br>
+3.操作数据库</p>
+<pre><code>use &lt;dbname&gt;;
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://antgui.github.io//post-images/1603520230375.png" alt="" loading="lazy"></figure>
+<p>4.查看数据库中所以数据表</p>
+<pre><code>show tables;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603520674505.png" alt="" loading="lazy"><br>
+5.删除数据库</p>
+<pre><code>drop database &lt;dbname&gt;;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603520912496.png" alt="" loading="lazy"><br>
+6.创建表</p>
+<pre><code>create table &lt;tablename&gt;(名字 类型，名字 类型，名字。。。);
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603521886491.png" alt="" loading="lazy"><br>
+9.查看表的定义</p>
+<pre><code>desc &lt;表名&gt;；
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603600055523.png" alt="" loading="lazy"><br>
+8.查看表创建时的语句</p>
+<pre><code>show create table &lt;tablename&gt;;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603600172136.png" alt="" loading="lazy"><br>
+9.删除表</p>
+<pre><code>drop table &lt;tablename&gt;;
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"></figure>
 
             </div>
             

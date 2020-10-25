@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603471603028">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603601054384">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -42,7 +42,7 @@ ls [-..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603471603028" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603601054384" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -168,7 +168,14 @@ ls -l &lt;文件名&gt;      # 查看某文件的权限
 <img src="https://antgui.github.io//post-images/1603470547672.png" alt="" loading="lazy"><br>
 然后通过文件权限图，我们可知，权限表示是：拥有者-所属用户-其他用户。<br>
 例如：666，即是rw-rw-rw。777即是rwxrwxrwx。</p>
-<p>10.作业：添加一个用户叫“naruto”，并使用sudo创建文件/ninjia/class_four，同时设置成只有用户naruto可以读写。</p>
+<pre><code>sudo chmod xxx &lt;文件或者目录&gt;    # xxx表示读写执行的二进制表示
+例如：
+sudo chmod 666 file
+</code></pre>
+<p>10.将文件或目录的权限改为别的用户</p>
+<pre><code>sudo chown &lt;用户名&gt; &lt;文件或者目录&gt;
+</code></pre>
+<p>11.作业：添加一个用户叫“naruto”，并使用sudo创建文件/ninjia/class_four，同时设置成只有用户naruto可以读写。</p>
 <p><strong>三，文件目录</strong><br>
 1.认识目录结构<br>
 <img src="https://antgui.github.io//post-images/1603471017713.png" alt="" loading="lazy"><br>
@@ -194,6 +201,40 @@ rm -f &lt;文件名&gt;   # 忽略提示直接强制删除
 rm -rf &lt;目录名&gt;
 </code></pre>
 <p>8.移动文件</p>
+<pre><code>mv &lt;源目录文件&gt; &lt;目的目录&gt;
+</code></pre>
+<p>9.重命名</p>
+<pre><code>mv &lt;filename&gt; &lt;new_filename&gt;
+</code></pre>
+<p>10.查看文件</p>
+<pre><code>cat &lt;文件&gt;
+cat -n &lt;文件&gt;  # 显示行号
+</code></pre>
+<p>11.查看文件类型</p>
+<pre><code>file &lt;文件&gt;
+</code></pre>
+<p>12.作业：创建一个homwork目录，建立名为1.txt<sub>10.txt文件，并删除1.txt</sub>5.txt。</p>
+<p><strong>四，环境变量</strong></p>
+<p><strong>五，搜索文件</strong><br>
+1.常用命令<br>
+whereis，which，find，locate<br>
+2.安装locate</p>
+<pre><code>sudo apt-get update
+sudo apt-get install locate
+sudo updatedb
+</code></pre>
+<p>3.例如查找/etc下带有sh的</p>
+<pre><code>locate /etc/sh
+</code></pre>
+<p>4.查找/user/share/下所以发jpg文件</p>
+<pre><code>locate /user/share/\*.jpg
+</code></pre>
+<p>5.find命令</p>
+<pre><code>find &lt;目录&gt; -name &lt;查找文件&gt;
+</code></pre>
+<p><strong>六，文件的打包和解压</strong></p>
+<pre><code>
+</code></pre>
 
             </div>
             
