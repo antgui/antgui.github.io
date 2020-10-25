@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-25T04:44:21.233Z</updated>
+    <updated>2020-10-25T06:04:13.486Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -214,7 +214,17 @@ sudo updatedb
 9.删除表</p>
 <pre><code>drop table &lt;tablename&gt;;
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"></figure>
+<p><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"><br>
+10.修改表<br>
+a.修改表中字段的定义</p>
+<pre><code>alter table &lt;tablename&gt; modify  名字 修改的定义类型;
+</code></pre>
+<p>b.增加字段</p>
+<pre><code>alter table &lt;tablename&gt; add column 名字 类型；
+</code></pre>
+<p>c.删除字段</p>
+<pre><code>alter table &lt;tablename&gt; drop column 名字;
+</code></pre>
 ]]></content>
     </entry>
     <entry>

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603601054384">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603605849994">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -41,7 +41,7 @@ show tab..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603601054384" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603605849994" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -136,7 +136,17 @@ show tab..." />
 9.删除表</p>
 <pre><code>drop table &lt;tablename&gt;;
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"></figure>
+<p><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"><br>
+10.修改表<br>
+a.修改表中字段的定义</p>
+<pre><code>alter table &lt;tablename&gt; modify  名字 修改的定义类型;
+</code></pre>
+<p>b.增加字段</p>
+<pre><code>alter table &lt;tablename&gt; add column 名字 类型；
+</code></pre>
+<p>c.删除字段</p>
+<pre><code>alter table &lt;tablename&gt; drop column 名字;
+</code></pre>
 
             </div>
             
