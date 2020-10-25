@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Leetcode 做题(简单篇)  基于c++ | WuQZ</title>
+<title>C++ STL基础学习 | WuQZ</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,11 +18,18 @@
 
 
 
-    <meta name="description" content="一，简单题
-1.两数之和
-
-第一种方法：暴力解法：O(n^2)   花费时间最多
-题目分析：题目给定一个整数数组和一个目标值，而这个目标值是这个整数数组其中两个元素的加和，并且同一个元素不能使用两次。我们可以通过选定数组的其中一个元素作为加..." />
+    <meta name="description" content="一，简介
+学习范围和知识点：
+1.模板编程
+2.泛型编程
+3.STL常用组件
+4.lambda表达式
+5.异常处理
+6.内存处理
+7.部分数据结构
+8.部分算法
+本次学习至少需要 -std=c++11，或是支持c++11相关特性。
+STL：..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -88,36 +95,48 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Leetcode 做题(简单篇)  基于c++</h2>
-            <div class="post-date">2020-10-22</div>
+            <h2 class="post-title">C++ STL基础学习</h2>
+            <div class="post-date">2020-10-25</div>
             
             <div class="post-content" v-pre>
-              <p>一，简单题</p>
-<p>1.两数之和<br>
-<img src="https://antgui.github.io//post-images/1603372333141.png" alt="" loading="lazy"></p>
-<p>第一种方法：暴力解法：O(n^2)   花费时间最多<br>
-题目分析：题目给定一个整数数组和一个目标值，而这个目标值是这个整数数组其中两个元素的加和，并且同一个元素不能使用两次。我们可以通过选定数组的其中一个元素作为加和前一项，加和的后一项我们可以遍历除选定外的后面元素，假如等于目标值，则返回。最后我们将选定的前一相变为循环即可。<br>
-<img src="https://antgui.github.io//post-images/1603373523977.png" alt="" loading="lazy"></p>
-<p>第二种方法：哈希表法（hashmap）<br>
-分析：我们可以通过创建哈希表，通过对应表（键值对）来进行查找，这个也是我们在现实工程使用最多，也是最吃经验的方法。（主要思想是边存边查，这样更快）</p>
-<p>a.存完再找<br>
-使用unordered_map<br>
-<img src="https://antgui.github.io//post-images/1603378197180.png" alt="" loading="lazy"></p>
-<p>b.边存边找<br>
-<img src="https://antgui.github.io//post-images/1603379226954.png" alt="" loading="lazy"></p>
-<p>2.整数反转<br>
-<img src="https://antgui.github.io//post-images/1603379453894.png" alt="" loading="lazy"><br>
-题目分析：将一个带符号整数数字反转，我们可以利用求余和地板除法来办到，比如：temp=12%10就是等于取出最低位2，12/10就是斩断最后一位剩1，当等于0时候停止循环，那么在利用sum = sum*10+temp即可。<br>
-<img src="https://antgui.github.io//post-images/1603382647330.png" alt="" loading="lazy"></p>
+              <p>一，简介<br>
+学习范围和知识点：<br>
+1.模板编程<br>
+2.泛型编程<br>
+3.STL常用组件<br>
+4.lambda表达式<br>
+5.异常处理<br>
+6.内存处理<br>
+7.部分数据结构<br>
+8.部分算法<br>
+本次学习至少需要 -std=c++11，或是支持c++11相关特性。</p>
+<p>STL：其中STL由算法，容器，迭代器，适配器，仿函数（函数对象），空间适配器六大部件组成。<br>
+STL有许多容器，包括：向量(vector)，列表(list),队列(queue)，双端队列(deque),优先队列(Priority queue),集合(set),多种集合(multiset),映射(map),多重映射(multimap)。</p>
+<p>为什么用STL：STL的算法是一种通用的算法，并不依赖特定的数据结构和算法，这样的好处是不用针对每种情况编写特定代码，而是给出一种通用的做法，是代码复用的一种实现方式，模板编程则是泛式编程的基础，就例如add(int &amp;a, int &amp;b),很明显这是传入两个引用来进行加法，但是它依赖于int这个特定的类型，暴露了这个函数内部结构不利于对底层的隔离和封装。</p>
+<p>二，基础知识点<br>
+<strong>a.模板编程</strong><br>
+1.基本语法<br>
+2.模板函数<br>
+3.类模板中的静态成员<br>
+4.typename和class<br>
+<strong>b.迭代器</strong><br>
+1.迭代器详解<br>
+2.迭代器种类和使用</p>
+<p>##########################################################################<br>
+a1.基本语法<br>
+模板的基本语法如下：</p>
+<pre><code>template &lt;typename/class T&gt;
+解释：template告诉编译器，接下来是一个模板，typename和class都是关键字，在这二者可以互用没有区别。在&lt;&gt;中的T叫做模板形参，一般模板被实例化，T也会变成具体的类型。
+</code></pre>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://antgui.github.io/post/c-stl-vector/">
+                <a href="https://antgui.github.io/post/pai-xu-suan-fa-ji-yu-cshi-xian/">
                   <h3 class="post-title">
-                    C++ STL **  Vector 
+                    排序算法 -- 基于c++实现
                   </h3>
                 </a>
               </div>
