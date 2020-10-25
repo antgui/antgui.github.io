@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-25T08:50:26.307Z</updated>
+    <updated>2020-10-25T09:54:58.198Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -43,8 +43,8 @@ STL有许多容器，包括：向量(vector)，列表(list),队列(queue)，双�
 a1.基本语法<br>
 模板的基本语法如下：</p>
 <pre><code>template &lt;typename/class T&gt;
-解释：template告诉编译器，接下来是一个模板，typename和class都是关键字，在这二者可以互用没有区别。在&lt;&gt;中的T叫做模板形参，一般模板被实例化，T也会变成具体的类型。
 </code></pre>
+<p>解释：template告诉编译器，接下来是一个模板，typename和class都是关键字，在这二者可以互用没有区别。在&lt;&gt;中的T叫做模板形参，一般模板被实例化，T也会变成具体的类型。</p>
 ]]></content>
     </entry>
     <entry>
