@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-25T06:50:23.407Z</updated>
+    <updated>2020-10-25T07:31:39.367Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -245,6 +245,18 @@ e.修改字段排序<br>
 <pre><code>alter table &lt;tablename&gt; modify 名字 类型 first;
 </code></pre>
 <figure data-type="image" tabindex="2"><img src="https://antgui.github.io//post-images/1603608619987.png" alt="" loading="lazy"></figure>
+<p>二，SQL表的连接<br>
+用于多表查询，比如当有2个表，一个表是学生的成绩单，一个是学生的信息表。那么我们就可以用连接把这两个表合成一个来查询。<br>
+<img src="https://antgui.github.io//post-images/1603610100958.jpg" alt="" loading="lazy"></p>
+<p>例如：leetcode题<br>
+1.组合两个表<br>
+<img src="https://antgui.github.io//post-images/1603610176655.png" alt="" loading="lazy"></p>
+<p>分析： 由题可知，表一是人的名字信息表，表二是人的地址信息表，而且题目要求无论person是否有地址，都要提供信息。我们可以考虑左连接来组合表。select 信息，信息。。。from 连接的主表 left（right/inner） join 另个表 on 公用链接点;<br>
+所以答案是：</p>
+<pre><code>select FirstName,LastName,City,State 
+from Person left join Address
+on Person.PersonId = Address.PersonId;
+``</code></pre>
 ]]></content>
     </entry>
     <entry>
