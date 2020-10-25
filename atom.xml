@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-25T06:04:13.486Z</updated>
+    <updated>2020-10-25T06:50:23.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -215,16 +215,36 @@ sudo updatedb
 <pre><code>drop table &lt;tablename&gt;;
 </code></pre>
 <p><img src="https://antgui.github.io//post-images/1603601051988.png" alt="" loading="lazy"><br>
-10.修改表<br>
+10.修改表</p>
+<pre><code>修改表名
+alter table 原表名 rename 改后的名;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603608164793.png" alt="" loading="lazy"><br>
 a.修改表中字段的定义</p>
 <pre><code>alter table &lt;tablename&gt; modify  名字 修改的定义类型;
 </code></pre>
-<p>b.增加字段</p>
+<p><img src="https://antgui.github.io//post-images/1603608171681.png" alt="" loading="lazy"><br>
+b.增加字段</p>
 <pre><code>alter table &lt;tablename&gt; add column 名字 类型；
 </code></pre>
-<p>c.删除字段</p>
+<p><img src="https://antgui.github.io//post-images/1603608178283.png" alt="" loading="lazy"><br>
+c.删除字段</p>
 <pre><code>alter table &lt;tablename&gt; drop column 名字;
 </code></pre>
+<p><img src="https://antgui.github.io//post-images/1603608185694.png" alt="" loading="lazy"><br>
+d.字段改名(change和modify都可以修复表的定义)</p>
+<pre><code>alter table &lt;tablename&gt; change 原名字 改后名字 改后类型;
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603608450550.png" alt="" loading="lazy"><br>
+e.修改字段排序<br>
+1）将新字段加在某字段后面</p>
+<pre><code>alter table &lt;tablename&gt; add 名字 类型 after 已存在的名字；
+</code></pre>
+<p><img src="https://antgui.github.io//post-images/1603608532324.png" alt="" loading="lazy"><br>
+2）修改某字段，将它放在最前面</p>
+<pre><code>alter table &lt;tablename&gt; modify 名字 类型 first;
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://antgui.github.io//post-images/1603608619987.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
