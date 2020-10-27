@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603619695772">
+<link rel="shortcut icon" href="https://antgui.github.io//favicon.ico?v=1603803147383">
 <link rel="stylesheet" href="https://antgui.github.io//styles/main.css">
 
 
@@ -39,7 +39,7 @@ STL：..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://antgui.github.io/">
-        <img src="https://antgui.github.io//images/avatar.png?v=1603619695772" class="site-logo">
+        <img src="https://antgui.github.io//images/avatar.png?v=1603803147383" class="site-logo">
         <h1 class="site-title">WuQZ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -128,6 +128,43 @@ a1.基本语法<br>
 <pre><code>template &lt;typename/class T&gt;
 </code></pre>
 <p>解释：template告诉编译器，接下来是一个模板，typename和class都是关键字，在这二者可以互用没有区别。在&lt;&gt;中的T叫做模板形参，一般模板被实例化，T也会变成具体的类型。</p>
+<pre><code>template &lt;typename T&gt;
+T add(const T lva,const T rva)
+{
+    T a;
+    a = lva + rva;
+    return a;
+}
+
+</code></pre>
+<p>当写出<code>add(1,2)</code>这样的函数时，函数编译阶段就会生成：</p>
+<pre><code>int add(const int lva, const int rva)           //  T 就是对应随意的变量类型 
+{
+    int a;
+    a = lva + rva;
+    return a;
+}
+</code></pre>
+<p>同理写出<code>add(2.5,4.6)</code>时，函数编译阶段就会生成：</p>
+<pre><code>double add(const double lva, const double rva)
+{
+    double a;
+    a = lva + rva;
+    return a;
+}
+</code></pre>
+<p>但是当我们使用<code>add(1,2.0)</code>时，编译器就无法找到add(int, double)。因为我们模板中T只特指随意一种。<br>
+当然也可以进行类的模板化</p>
+<pre><code>template &lt;class T&gt;
+class Myclass
+{
+    T a;
+    public:
+        T add(const T lva,const T rva);
+};
+
+
+</code></pre>
 
             </div>
             

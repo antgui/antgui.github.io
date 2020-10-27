@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antgui.github.io/</id>
     <title>WuQZ</title>
-    <updated>2020-10-25T09:54:58.198Z</updated>
+    <updated>2020-10-27T12:52:31.862Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://antgui.github.io/"/>
     <link rel="self" href="https://antgui.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://antgui.github.io/images/avatar.png</logo>
     <icon>https://antgui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, WuQZ</rights>
+    <entry>
+        <title type="html"><![CDATA[计算机网络]]></title>
+        <id>https://antgui.github.io/post/ji-suan-ji-wang-luo/</id>
+        <link href="https://antgui.github.io/post/ji-suan-ji-wang-luo/">
+        </link>
+        <updated>2020-10-26T14:45:27.000Z</updated>
+        <content type="html"><![CDATA[<p>一，计算机网络定义<br>
+大量通过同一种技术相互连接起来的自主计算机并共同完成计算任务，这样的系统叫做计算机网络/<br>
+简单的说：是通过一组单一技术相互连接的自主计算机集合。</p>
+<p>二，分布式系统和计算机网络</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C++ STL基础学习]]></title>
         <id>https://antgui.github.io/post/c-stl-ji-chu-xue-xi/</id>
@@ -45,6 +57,43 @@ a1.基本语法<br>
 <pre><code>template &lt;typename/class T&gt;
 </code></pre>
 <p>解释：template告诉编译器，接下来是一个模板，typename和class都是关键字，在这二者可以互用没有区别。在&lt;&gt;中的T叫做模板形参，一般模板被实例化，T也会变成具体的类型。</p>
+<pre><code>template &lt;typename T&gt;
+T add(const T lva,const T rva)
+{
+    T a;
+    a = lva + rva;
+    return a;
+}
+
+</code></pre>
+<p>当写出<code>add(1,2)</code>这样的函数时，函数编译阶段就会生成：</p>
+<pre><code>int add(const int lva, const int rva)           //  T 就是对应随意的变量类型 
+{
+    int a;
+    a = lva + rva;
+    return a;
+}
+</code></pre>
+<p>同理写出<code>add(2.5,4.6)</code>时，函数编译阶段就会生成：</p>
+<pre><code>double add(const double lva, const double rva)
+{
+    double a;
+    a = lva + rva;
+    return a;
+}
+</code></pre>
+<p>但是当我们使用<code>add(1,2.0)</code>时，编译器就无法找到add(int, double)。因为我们模板中T只特指随意一种。<br>
+当然也可以进行类的模板化</p>
+<pre><code>template &lt;class T&gt;
+class Myclass
+{
+    T a;
+    public:
+        T add(const T lva,const T rva);
+};
+
+
+</code></pre>
 ]]></content>
     </entry>
     <entry>
